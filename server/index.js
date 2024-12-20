@@ -1,7 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
 import helmet from "helmet";
-import morgan from "morgan";
 import mongoose from "mongoose";
 import userRoute from "./routes/users.js";
 import authRoute from "./routes/auth.js";
@@ -10,9 +9,16 @@ import routineRoute from "./routes/routines.js";
 import mealRoute from "./routes/meals.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+import morgan from 'morgan'; // Correct import for ES modules
+
+// Use morgan middleware
+
+
+
 
 // Initialize express app
 const app = express();
+app.use(morgan('dev'));
 
 // Configure environment variables
 dotenv.config();
