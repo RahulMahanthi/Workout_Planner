@@ -14,7 +14,7 @@ const CreateEntry = ({ setOpen }) => {
 
     const { user } = useContext(AuthContext);
     const [info, setInfo] = useState({});
-    const { data } = useFetch(`http://localhost:7700/api/entries/fetchMealsAndRoutines/${user._id}`)
+    const { data } = useFetch(`https://workout-planner-c3zz.onrender.com/api/entries/fetchMealsAndRoutines/${user._id}`)
     const handleChange = (e) => {
         setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
     }
@@ -25,7 +25,7 @@ const CreateEntry = ({ setOpen }) => {
             ...info, author: user._id
         }
         try {
-            await axios.post('http://localhost:7700/api/entries/', newEntry, {
+            await axios.post('https://workout-planner-c3zz.onrender.com/api/entries/', newEntry, {
                 withCredentials: false
             })
             setOpen(false)

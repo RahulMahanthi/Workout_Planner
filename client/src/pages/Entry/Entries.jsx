@@ -9,7 +9,7 @@ import { AuthContext } from '../../authContext';
 
 const Entries = () => {
     const { user } = useContext(AuthContext);
-    const { data, loading, error } = useFetch(`http://localhost:7700/api/entries/${user._id}`);
+    const { data, loading, error } = useFetch(`https://workout-planner-c3zz.onrender.com/api/entries/${user._id}`);
 
     function formatDate(dateString) {
         const date = new Date(dateString);

@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 const Meal = () => {
     const { user } = useContext(AuthContext);
-    const { data, loading, error } = useFetch(`http://localhost:7700/api/meals/${user._id}`);
+    const { data, loading, error } = useFetch(`https://workout-planner-c3zz.onrender.com/api/meals/${user._id}`);
 
     // Handle loading state
     if (loading) return <p>Loading...</p>;

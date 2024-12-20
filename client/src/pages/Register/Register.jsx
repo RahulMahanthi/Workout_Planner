@@ -26,7 +26,7 @@ function Register() {
             };
             
 
-            await axios.post("http://localhost:7700/api/auth/register", newUser); 
+            await axios.post("https://workout-planner-c3zz.onrender.com/api/auth/register", newUser); 
             navigate("/login");
         } catch (err) {
             setError("Error during registration. Please try again.");
