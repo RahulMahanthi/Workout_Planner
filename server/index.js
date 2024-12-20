@@ -50,11 +50,14 @@ app.use(express.json());
 app.use(helmet());
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://deploy-mern-1whq.vercel.app"],
+    origin: (origin, callback) => {
+      callback(null, true); // Allow all origins
+    },
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"], // Add common HTTP methods
   })
 );
+
 
 // Routes
 app.use("/api/auth", authRoute);
