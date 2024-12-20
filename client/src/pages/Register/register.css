@@ -1,0 +1,113 @@
+/* Basic body and html settings */
+body,
+html {
+    overflow-x: hidden;
+    font-family: Arial, sans-serif; /* Use a simple, readable font */
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Main card for the registration form */
+.registerCard {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden;
+    position: relative;
+}
+
+.registerCard .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px; /* Fixed width */
+    background-color:  #fecda630; /* White background for the form */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Heading styles */
+.center h1 {
+    font-size: 1.5rem; /* Slightly larger font size */
+    text-align: center;
+    padding: 20px 0; /* Top and bottom padding */
+    color: #333; /* Dark text color */
+    border-bottom: 2px solid #eaeaea; /* Light border for separation */
+}
+
+/* Form styling */
+.center form {
+    padding: 20px 40px; /* Padding around the form */
+    box-sizing: border-box;
+}
+
+/* Text field styling */
+form .txt_field {
+    position: relative;
+    border-bottom: 2px solid #adadad; /* Bottom border */
+    margin: 30px 0; /* Vertical spacing */
+    transition: border-color 0.3s; /* Transition for border color change */
+}
+
+.txt_field input {
+    width: 100%; /* Full width of the container */
+    padding: 10px; /* Padding inside the input */
+    height: 40px; /* Fixed height */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    background: none; /* Transparent background */
+    outline: none; /* Remove outline */
+    color: #333; /* Dark text color */
+}
+
+
+
+/* Button styling */
+.register input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    font-size: 16px;
+    color: black; /* Text color */
+    background-color: transparent; /* Transparent background */
+    outline: none; /* Remove outline */
+}
+
+.login_button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: #e74c3c; /* Red background */
+    border-radius: 25px; /* Rounded corners */
+    font-size: 18px;
+    color: white; /* White text */
+    font-weight: 700; /* Bold text */
+    cursor: pointer; /* Pointer cursor on hover */
+    outline: none; /* Remove outline */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+/* Login button hover effect */
+.login_button:hover {
+    background: #c0392b; /* Darker red on hover */
+}
+
+/* Signup link styling */
+.signup_link {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666; /* Gray text */
+}
+
+
+
+
+
+/* Responsive design */
+@media screen and (max-width: 500px) {
+    .registerCard .center {
+        width: 90%; /* Adjust width for small screens */
+    }
+}
