@@ -24,7 +24,7 @@ const CreateMeal = ({ setOpen }) => {
             ...info, author: user._id
         }
         try {
-            await axios.post("https://workout-planner-c3zz.onrender.com/api/meals", newMeal, {
+            await axios.post("https://workout-planner-1-8yuq.onrender.com/api/meals", newMeal, {
                 withCredentials: false
             })
             setOpen(false)

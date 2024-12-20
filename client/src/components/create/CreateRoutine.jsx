@@ -25,7 +25,7 @@ const CreateRoutine = ({ setOpen }) => {
             ...info, author: user._id
         }
         try {
-            await axios.post("https://workout-planner-c3zz.onrender.com/api/routines", newRoutine, {
+            await axios.post("https://workout-planner-1-8yuq.onrender.com/api/routines", newRoutine, {
                 withCredentials: false
             })
             setOpen(false)
